@@ -1,0 +1,143 @@
+body {
+    text-align: center;
+    background-color: #dfe0df;
+}
+
+* {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.title{
+    padding: 0;
+    margin: .5rem;
+    font-family: 'Brush Script MT', 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    color: #63baab;
+}
+
+.container,
+.item,
+dialog button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .grid {
+    width: 480px;
+    height: 480px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    padding: 1rem;
+    box-shadow: 0 0 transparent;
+    transition: box-shadow 200ms linear;
+}
+
+.board:hover {
+    box-shadow: 0 0 10px 3px #1D1D35;
+}
+
+.board.grid > * {
+    border: 2px solid #2F4858;
+}
+
+.item > svg {
+    fill: #2f4858;
+    height: 120px;
+}
+
+.grid > *:nth-last-child(1n + 7) {
+    border-top-color: transparent;
+}
+
+.grid > *:nth-child(3n + 3) {
+    border-right-color: transparent;
+}
+
+.grid > *:nth-child(3n + 1) {
+    border-left-color: transparent;
+}
+
+.grid > *:nth-child(1n + 7) {
+    border-bottom-color: transparent;
+    color: #d2691e;
+}
+
+.btn {
+    --border: #1d1d35;
+    --bg-col: #00c78c;
+    --txt: #1D1D35;
+    padding: .5rem 1.8rem;
+    margin: 1rem;
+    letter-spacing: 1px;
+    color: var(--txt);
+    background-color: var(--bg-col);
+    border: 2px solid var(--border);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-radius: 1rem;
+    transition: outline 150ms ease-in-out, border 150ms ease-in-out;
+}
+
+.btn:hover {
+    outline-color: var(--border);
+}
+
+.btn:active {
+    --border: transparent;
+}
+
+dialog {
+    border-radius: 1rem;
+    border: 2px solid #4B4453;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+dialog button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #63baab;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    outline: none;
+}
+
+dialog button:hover {
+    opacity: 0.7;
+}
+
+dialog::backdrop {
+    opacity: 0.5;
+}
+
+dialog label {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: center;
+    color: #4B4453;
+}
+
+dialog input {
+    color: #4B4453;
+}
+
+dialog .board {
+    width: 240px;
+    height: 240px;
+}
+
+dialog .item {
+    width: 80px;
+}
+
+dialog img{
+    box-sizing: border-box;
+    width:50%;
+    object-fit: contain;
+}
