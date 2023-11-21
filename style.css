@@ -91,7 +91,7 @@ dialog button {
 dialog {
     border-radius: 1rem;
     border: 2px solid #4B4453;
-    width: 500px;
+    width: 400px;
     height: 500px;
     position: relative;
 }
@@ -127,17 +127,8 @@ dialog input {
     color: #4B4453;
 }
 
-dialog .board {
-    width: 240px;
-    height: 240px;
-}
-
-dialog .item {
-    width: 80px;
-}
-
 dialog img{
     box-sizing: border-box;
-    width:50%;
+    width:60%;
     object-fit: contain;
 }
